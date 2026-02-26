@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "hello-mcp": {
+      "command": "node",
+      "args": [
+        "C:/path/to/fact_sim_mcp/dist/index.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "fact_sim_mcp",
+  "version": "1.0.0",
+  "description": "Minimal Hello MCP server with a single ping tool",
+  "type": "module",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suzuking001/fact_sim_mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suzuking001/fact_sim_mcp/issues"
+  },
+  "homepage": "https://github.com/suzuking001/fact_sim_mcp#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.1",
+    "typescript": "^5.9.3"
+  }
+}
