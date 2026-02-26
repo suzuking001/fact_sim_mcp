@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "hello-mcp": {
+      "command": "node",
+      "args": [
+        "dist/index.js"
+      ]
+    }
+  }
+}
