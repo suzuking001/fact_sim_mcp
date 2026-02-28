@@ -1,0 +1,838 @@
+{
+  "last_node_id": 18,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "factory/source",
+      "pos": {
+        "0": 80,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null,
+          "__lastSet": null,
+          "__animToken": null
+        }
+      ],
+      "title": "Body Panel Source",
+      "properties": {
+        "sequence": "A,B,A,B,A,B",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false
+      },
+      "color": "#f39c12",
+      "bgcolor": "#fff6e6"
+    },
+    {
+      "id": 6,
+      "type": "factory/agvroute",
+      "pos": {
+        "0": 260,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": "work",
+          "link": null
+        },
+        {
+          "name": "agvIn",
+          "type": "AGV",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": "work",
+          "links": null,
+          "__lastSet": null,
+          "__animToken": null
+        },
+        {
+          "name": "agvOut",
+          "type": "AGV",
+          "links": null
+        }
+      ],
+      "title": "AGV Inbound",
+      "properties": {
+        "processTime": 2.5,
+        "downTime": 0.4,
+        "agvCapacity": 3,
+        "agvIds": "AGV-IN-1,AGV-IN-2,AGV-IN-3",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false
+      },
+      "color": "#f39c12",
+      "bgcolor": "#fff6e6"
+    },
+    {
+      "id": 7,
+      "type": "factory/equip",
+      "pos": {
+        "0": 440,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Framing & Tack Weld",
+      "properties": {
+        "processTime": 8,
+        "downTime": 1.2,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 8,
+      "type": "factory/equip",
+      "pos": {
+        "0": 620,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Underbody Robotic Weld",
+      "properties": {
+        "processTime": 12,
+        "downTime": 1.5,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 9,
+      "type": "factory/agvroute",
+      "pos": {
+        "0": 800,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": "work",
+          "link": null
+        },
+        {
+          "name": "agvIn",
+          "type": "AGV",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": "work",
+          "links": null,
+          "__lastSet": null,
+          "__animToken": null
+        },
+        {
+          "name": "agvOut",
+          "type": "AGV",
+          "links": null
+        }
+      ],
+      "title": "AGV Transfer Mid",
+      "properties": {
+        "processTime": 2.8,
+        "downTime": 0.5,
+        "agvCapacity": 2,
+        "agvIds": "AGV-MID-1,AGV-MID-2",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false
+      },
+      "color": "#f39c12",
+      "bgcolor": "#fff6e6"
+    },
+    {
+      "id": 10,
+      "type": "factory/equip",
+      "pos": {
+        "0": 980,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Side + Roof Weld",
+      "properties": {
+        "processTime": 14,
+        "downTime": 1.8,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 11,
+      "type": "factory/equip",
+      "pos": {
+        "0": 1160,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Spot Weld Finish",
+      "properties": {
+        "processTime": 9,
+        "downTime": 1,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 12,
+      "type": "factory/equip",
+      "pos": {
+        "0": 1340,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Dimensional Inspection",
+      "properties": {
+        "processTime": 5,
+        "downTime": 0.8,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 13,
+      "type": "factory/split",
+      "pos": {
+        "0": 1520,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut1",
+          "type": 0,
+          "links": null
+        },
+        {
+          "name": "workOut2",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Rework Split",
+      "properties": {
+        "processTime": 1,
+        "downTime": 0.2,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "ratio": 0.92,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 14,
+      "type": "factory/equip",
+      "pos": {
+        "0": 1700,
+        "1": 320,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Rework Weld Cell",
+      "properties": {
+        "processTime": 10,
+        "downTime": 1.1,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 15,
+      "type": "factory/join",
+      "pos": {
+        "0": 1700,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn1",
+          "type": 0,
+          "link": null
+        },
+        {
+          "name": "workIn2",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Rejoin After Rework",
+      "properties": {
+        "processTime": 1,
+        "downTime": 0.2,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\n// Join passes works in arrival order by default.\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 16,
+      "type": "factory/agvroute",
+      "pos": {
+        "0": 1880,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": "work",
+          "link": null
+        },
+        {
+          "name": "agvIn",
+          "type": "AGV",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": "work",
+          "links": null,
+          "__lastSet": null,
+          "__animToken": null
+        },
+        {
+          "name": "agvOut",
+          "type": "AGV",
+          "links": null
+        }
+      ],
+      "title": "AGV Outbound",
+      "properties": {
+        "processTime": 2.2,
+        "downTime": 0.4,
+        "agvCapacity": 3,
+        "agvIds": "AGV-OUT-1,AGV-OUT-2,AGV-OUT-3",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false
+      },
+      "color": "#f39c12",
+      "bgcolor": "#fff6e6"
+    },
+    {
+      "id": 17,
+      "type": "factory/equip",
+      "pos": {
+        "0": 2060,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "workOut",
+          "type": 0,
+          "links": null
+        }
+      ],
+      "title": "Final Quality Gate",
+      "properties": {
+        "processTime": 4,
+        "downTime": 0.6,
+        "script": "// work: Work object (work.id, work.type, etc.)\n// signalArr: array of sigIn values\n\nif(work.type === 'A'){\n  this.properties.processTime = 5.0;\n  this.properties.downTime = 3.0;\n}else if(work.type === 'B'){\n  this.properties.processTime = 4.0;\n  this.properties.downTime = 2.0;\n}else{\n  // default\n  this.properties.processTime = 10.0;\n  this.properties.downTime = 2.0;\n}\n\n// Return true to accept this work item into PROCESS\nreturn true;",
+        "sigExtra": 0,
+        "sigEnabled": true,
+        "flipIO": false,
+        "scriptDisabled": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    },
+    {
+      "id": 18,
+      "type": "factory/sink",
+      "pos": {
+        "0": 2240,
+        "1": 220,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "size": [
+        220,
+        170
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "workIn",
+          "type": 0,
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Body-in-White Output",
+      "properties": {
+        "flipIO": false
+      },
+      "color": "#f1c40f",
+      "bgcolor": "#fff9db"
+    }
+  ],
+  "links": [
+    [
+      1,
+      5,
+      0,
+      6,
+      0,
+      0
+    ],
+    [
+      2,
+      6,
+      0,
+      7,
+      0,
+      0
+    ],
+    [
+      3,
+      7,
+      0,
+      8,
+      0,
+      0
+    ],
+    [
+      4,
+      8,
+      0,
+      9,
+      0,
+      0
+    ],
+    [
+      5,
+      9,
+      0,
+      10,
+      0,
+      0
+    ],
+    [
+      6,
+      10,
+      0,
+      11,
+      0,
+      0
+    ],
+    [
+      7,
+      11,
+      0,
+      12,
+      0,
+      0
+    ],
+    [
+      8,
+      12,
+      0,
+      13,
+      0,
+      0
+    ],
+    [
+      9,
+      13,
+      0,
+      15,
+      0,
+      0
+    ],
+    [
+      10,
+      13,
+      1,
+      14,
+      0,
+      0
+    ],
+    [
+      11,
+      14,
+      0,
+      15,
+      1,
+      0
+    ],
+    [
+      12,
+      15,
+      0,
+      16,
+      0,
+      0
+    ],
+    [
+      13,
+      16,
+      0,
+      17,
+      0,
+      0
+    ],
+    [
+      14,
+      17,
+      0,
+      18,
+      0,
+      0
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

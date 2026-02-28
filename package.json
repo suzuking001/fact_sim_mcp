@@ -1,7 +1,7 @@
-{
+﻿{
   "name": "fact_sim_mcp",
-  "version": "1.0.0",
-  "description": "Minimal Hello MCP server with a single ping tool",
+  "version": "0.2.0",
+  "description": "MCP server for controlling fact_sim via Playwright",
   "type": "module",
   "private": true,
   "main": "dist/index.js",
@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/suzuking001/fact_sim_mcp#readme",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.27.1"
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "playwright": "^1.58.2",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/node": "^25.3.1",
+    "@types/node": "^24.11.0",
     "typescript": "^5.9.3"
   }
 }

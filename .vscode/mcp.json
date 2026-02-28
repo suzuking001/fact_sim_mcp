@@ -1,6 +1,6 @@
-{
+﻿{
   "servers": {
-    "hello-mcp": {
+    "fact-sim-mcp": {
       "command": "node",
       "args": [
         "dist/index.js"

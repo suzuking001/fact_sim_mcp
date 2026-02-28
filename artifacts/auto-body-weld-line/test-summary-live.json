@@ -1,0 +1,85 @@
+{
+  "scenario": "automotive_body_welding_line_live_connect",
+  "design": {
+    "nodeIds": {
+      "src": 1,
+      "framing": 2,
+      "underbody": 3,
+      "sideRoof": 4,
+      "spot": 5,
+      "dimInspect": 6,
+      "split": 7,
+      "rework": 8,
+      "join": 9,
+      "finalInspect": 10,
+      "sink": 11
+    },
+    "nodeCount": 11,
+    "linkCount": 11
+  },
+  "run": {
+    "stop": {
+      "running": false,
+      "simTimeMs": 17448900
+    },
+    "status": {
+      "running": false,
+      "mode": "dt",
+      "simTimeMs": 17448900,
+      "fastestMode": true,
+      "graphStatus": 1,
+      "nodeCount": 11,
+      "linkCount": 11
+    },
+    "simHours": 4.847,
+    "totalCompleted": 2487,
+    "throughputPerHourTotal": 514,
+    "projectedThroughputPerHour": 513.1097089214793,
+    "sinkKpis": [
+      {
+        "id": 11,
+        "title": "BIW Output",
+        "type": "factory/sink",
+        "completedCount": 2487,
+        "throughputPerHour": 514,
+        "averageCycleTimeSec": 7,
+        "recentSamples": 60
+      }
+    ]
+  },
+  "benchmarkSummary": [
+    {
+      "mode": "dt",
+      "renderCase": "headless",
+      "speed": 4433.2
+    },
+    {
+      "mode": "event",
+      "renderCase": "headless",
+      "speed": 8622.677
+    },
+    {
+      "mode": "dt",
+      "renderCase": "render",
+      "speed": 4.261
+    },
+    {
+      "mode": "event",
+      "renderCase": "render",
+      "speed": 4.126
+    }
+  ],
+  "topologySuggestions": [
+    {
+      "severity": "info",
+      "code": "graph.topology_balanced",
+      "message": "No major structural issues detected. Proceed with parameter tuning and benchmark search."
+    }
+  ],
+  "timelineLineCount": 1338,
+  "artifacts": {
+    "graphJson": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-live.json",
+    "timelineCsv": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-live-timeline.csv",
+    "snapshotPng": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-live.png"
+  }
+}

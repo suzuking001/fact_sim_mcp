@@ -1,0 +1,69 @@
+{
+  "scenario": "auto_body_welding_line",
+  "nodes": {
+    "src": 5,
+    "agvIn": 6,
+    "framing": 7,
+    "underbody": 8,
+    "agvMid": 9,
+    "sideRoof": 10,
+    "spotFinish": 11,
+    "dimInspect": 12,
+    "split": 13,
+    "rework": 14,
+    "join": 15,
+    "agvOut": 16,
+    "finalInspect": 17,
+    "sink": 18
+  },
+  "topology": {
+    "nodeCount": 14,
+    "linkCount": 14,
+    "nodeTypeCounts": {
+      "factory/source": 1,
+      "factory/agvroute": 3,
+      "factory/equip": 7,
+      "factory/split": 1,
+      "factory/join": 1,
+      "factory/sink": 1
+    }
+  },
+  "run": {
+    "stop": {
+      "running": false,
+      "simTimeMs": 4999.700000000001
+    },
+    "simHours": 0.001,
+    "totalCompleted": 0,
+    "sinkCount": 1,
+    "throughputPerHourTotal": 0,
+    "projectedThroughputPerHour": 0
+  },
+  "benchmarkSummary": [
+    {
+      "mode": "dt",
+      "renderCase": "headless",
+      "speed": 8581.667
+    },
+    {
+      "mode": "event",
+      "renderCase": "headless",
+      "speed": 13302.101
+    },
+    {
+      "mode": "dt",
+      "renderCase": "render",
+      "speed": 4.666
+    },
+    {
+      "mode": "event",
+      "renderCase": "render",
+      "speed": 4.702
+    }
+  ],
+  "artifacts": {
+    "graphJson": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line.json",
+    "timelineCsv": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-timeline.csv",
+    "snapshotPng": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line.png"
+  }
+}

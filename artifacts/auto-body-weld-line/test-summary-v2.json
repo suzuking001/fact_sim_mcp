@@ -1,0 +1,83 @@
+{
+  "scenario": "auto_body_welding_line_v2",
+  "nodes": {
+    "src": 5,
+    "framing": 6,
+    "underbody": 7,
+    "sideRoof": 8,
+    "spot": 9,
+    "dimInspect": 10,
+    "split": 11,
+    "rework": 12,
+    "join": 13,
+    "finalInspect": 14,
+    "sink": 15
+  },
+  "topology": {
+    "nodeCount": 11,
+    "linkCount": 11,
+    "nodeTypeCounts": {
+      "factory/source": 1,
+      "factory/equip": 7,
+      "factory/split": 1,
+      "factory/join": 1,
+      "factory/sink": 1
+    }
+  },
+  "run": {
+    "stop": {
+      "running": false,
+      "simTimeMs": 2402713600
+    },
+    "simHours": 667.42,
+    "totalCompleted": 0,
+    "sinkCount": 1,
+    "throughputPerHourTotal": 0,
+    "projectedThroughputPerHour": 0,
+    "sinkKpis": [
+      {
+        "id": 15,
+        "title": "BIW Output",
+        "type": "factory/sink",
+        "completedCount": 0,
+        "throughputPerHour": 0,
+        "averageCycleTimeSec": null,
+        "recentSamples": 0
+      }
+    ]
+  },
+  "benchmarkSummary": [
+    {
+      "mode": "dt",
+      "renderCase": "headless",
+      "speed": 10103.067
+    },
+    {
+      "mode": "event",
+      "renderCase": "headless",
+      "speed": 14466.091
+    },
+    {
+      "mode": "dt",
+      "renderCase": "render",
+      "speed": 4.593
+    },
+    {
+      "mode": "event",
+      "renderCase": "render",
+      "speed": 4.545
+    }
+  ],
+  "topologySuggestions": [
+    {
+      "severity": "info",
+      "code": "graph.topology_balanced",
+      "message": "No major structural issues detected. Proceed with parameter tuning and benchmark search."
+    }
+  ],
+  "artifacts": {
+    "graphJson": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-v2.json",
+    "timelineCsv": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-v2-timeline.csv",
+    "snapshotPng": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\auto-body-weld-line\\auto-body-weld-line-v2.png"
+  }
+}

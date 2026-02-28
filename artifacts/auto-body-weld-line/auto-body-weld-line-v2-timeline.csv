@@ -1,0 +1,10 @@
+node,nodeId,nodeOrder,start,end,duration,state,workId,agvId
+Framing & Fixture #6,6,1,2402113.600,2402713.600,600.000,idle,,
+Underbody Main Weld #7,7,2,2402113.600,2402713.600,600.000,idle,,
+Side/Roof Weld #8,8,3,2402113.600,2402713.600,600.000,idle,,
+Spot Weld Finish #9,9,4,2402113.600,2402713.600,600.000,idle,,
+Dimensional Inspection #10,10,5,2402113.600,2402713.600,600.000,idle,,
+Quality Split #11,11,6,2402113.600,2402713.600,600.000,idle,,
+Rejoin #13,13,7,2402113.600,2402713.600,600.000,idle,,
+Rework Weld Cell #12,12,8,2402113.600,2402713.600,600.000,idle,,
+Final Audit #14,14,9,2402113.600,2402713.600,600.000,idle,,

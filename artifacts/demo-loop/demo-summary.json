@@ -1,0 +1,105 @@
+{
+  "appUrl": "http://127.0.0.1:8123/index.html",
+  "generatedAt": "2026-02-28T15:18:48.320Z",
+  "candidates": {
+    "candidate0": {
+      "name": "simple",
+      "bytes": 2550
+    },
+    "candidate1": {
+      "name": "branch",
+      "bytes": 3483
+    }
+  },
+  "ranking": {
+    "objective": "balanced",
+    "wallMs": 150,
+    "requestedCandidates": 2,
+    "evaluatedCandidates": 2,
+    "succeeded": 2,
+    "failed": 0,
+    "rankings": [
+      {
+        "index": 0,
+        "ok": true,
+        "score": 9003.966666666667,
+        "nodeCount": 4,
+        "linkCount": 3,
+        "throughputPerHourTotal": 0,
+        "bestHeadlessSpeed": 25729.333333333332
+      },
+      {
+        "index": 1,
+        "ok": true,
+        "score": 7036.356,
+        "nodeCount": 5,
+        "linkCount": 5,
+        "throughputPerHourTotal": 0,
+        "bestHeadlessSpeed": 20108.16
+      }
+    ]
+  },
+  "adopted": {
+    "index": 0,
+    "name": "simple",
+    "score": 9003.966666666667
+  },
+  "suggestion": {
+    "nodeCount": 4,
+    "linkCount": 3,
+    "sourceNodeCount": 1,
+    "sinkNodeCount": 1,
+    "isolatedNodeCount": 0,
+    "unreachableNodeCount": 0,
+    "cycleDetected": false,
+    "linkToNodeRatio": 0.75,
+    "nodeTypeCounts": {
+      "factory/source": 1,
+      "factory/equip": 2,
+      "factory/sink": 1
+    },
+    "warnings": [],
+    "suggestions": [
+      {
+        "severity": "info",
+        "code": "graph.low_connectivity",
+        "message": "Connectivity is sparse. Consider adding buffers/transport links between stages."
+      }
+    ]
+  },
+  "improvementApplied": {
+    "from": "simple",
+    "to": "branch",
+    "reasonCode": "graph.low_connectivity",
+    "evaluation": {
+      "objective": "balanced",
+      "wallMs": 150,
+      "score": 7221.865333333333,
+      "benchmarkSummary": {
+        "bestHeadlessMode": "event",
+        "bestHeadlessSpeed": 20638.18666666667,
+        "headlessDtSpeed": 18375.333333333332,
+        "headlessEventSpeed": 20638.18666666667,
+        "renderDtSpeed": 4.654255319137408,
+        "renderEventSpeed": 4.643799472278397
+      },
+      "graph": {
+        "nodeCount": 5,
+        "linkCount": 5
+      },
+      "kpi": {
+        "throughputPerHourTotal": 0,
+        "projectedThroughputPerHour": null,
+        "totalCompleted": 0,
+        "sinkCount": 1
+      },
+      "warnings": []
+    }
+  },
+  "screenshots": {
+    "candidateSimple": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\demo-loop\\step1_candidate_simple.png",
+    "candidateBranch": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\demo-loop\\step2_candidate_branch.png",
+    "adoptedRunning": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\demo-loop\\step3_adopted_running.png",
+    "improvedReflected": "G:\\マイドライブ\\プログラミング\\github\\fact_sim_mcp\\artifacts\\demo-loop\\step4_improved_reflected.png"
+  }
+}
