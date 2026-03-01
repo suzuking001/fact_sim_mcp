@@ -1,9 +1,9 @@
-﻿{
+{
   "mcpServers": {
     "fact-sim-mcp": {
       "command": "node",
       "args": [
-        "G:/マイドライブ/プログラミング/github/fact_sim_mcp/dist/index.js"
+        "<ABSOLUTE_PATH_TO_FACT_SIM_MCP>/dist/index.js"
       ]
     }
   }

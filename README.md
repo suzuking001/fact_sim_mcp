@@ -53,6 +53,11 @@
 47. `describe_node_type(nodeType: string)`
 48. `build_graph_from_blueprint(nodes: BlueprintNodeInput[], edges?: BlueprintEdgeInput[], clearExisting?: boolean, originX?: number, originY?: number, xPitch?: number, yPitch?: number)`
 49. `optimize_line_by_bottleneck(iterations?: number, runWallMs?: number, bottleneckTopN?: number, minSampleSec?: number, maxNodesPerIteration?: number, processReductionRatio?: number, downReductionRatio?: number, minProcessTime?: number, minDownTime?: number)`
+50. `set_takt_target_and_objective(taktSec: number, objectiveWeights?: { throughput?: number; taktGap?: number; cycleTime?: number; nodeCount?: number; linkCount?: number; completion?: number })`
+51. `validate_layout_rules(minDistance?: number, forbiddenAdjacency?: string[])`
+52. `run_design_of_experiments(paramGrid: DoeParamGridInput, wallMs?: number)`
+53. `set_random_seed(seed: number)`
+54. `get_random_seed()`
 
 ## Features
 
